@@ -1,16 +1,9 @@
 #!/usr/bin/python3
-"""
-Python implementation of the pascals triangle
-"""
+"""Pascal Triangle module"""
 
 
 def pascal_triangle(n):
-    """
-    This package implements the python triangle using python.
-    The depth of the triangle is specified by the variable 'n'
-    """
-
-    triangle = []
+    """Generates a list of lists based on pascal triangle"""
     pascal_t = []
     for i in range(1, n + 1):
         row = [1] * (i)
@@ -18,5 +11,3 @@ def pascal_triangle(n):
             row[j - 1] = pascal_t[i - 2][j - 2] + pascal_t[i - 2][j - 1]
         pascal_t.append(row)
     return pascal_t
-
-print(pascal_triangle(5))
